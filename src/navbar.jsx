@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./styles/style.css";
-import { Outlet } from "react-router-dom";
+import "./index.css";
+import { Outlet, Link } from "react-router-dom";
 
 export function NavBar() {
   return (
@@ -16,7 +16,7 @@ export function NavBar() {
         </div>
         {/* Logo */}
         <div className="logo">
-          <h1>ZenCart</h1>
+          <h1 className="font-black text-3xl">ZenCart</h1>
         </div>
         {/* Right Side */}
         <div className="right-side">
@@ -28,7 +28,6 @@ export function NavBar() {
           </ul>
         </div>
       </div>
-      <br></br>
       <br></br>
       <br></br>
       <br></br>
