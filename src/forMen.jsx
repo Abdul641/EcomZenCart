@@ -5,11 +5,20 @@ export function ForMen() {
     <>
       <br></br>
       <div className="for-men">
-        <div className="TravisScott-div"></div>
+        {/* Travis Scott */}
+        <div className="mainTravis-div">
+          <div className="TravisScott-div"></div>
+          <div className="TravisScott-Content">
+            <h1 className="AirJordans">Jordan 1 Retro High OG SP</h1>
+            <hr></hr>
+            <h2 className="AirJordans-description">Travis Scott Mocha</h2>
+          </div>
+        </div>
+
+        {/*  */}
         <div className="forMenImg-div"></div>
         <div className="forMenImg-div"></div>
       </div>
-      <div className="forMen-display"></div>
     </>
   );
 }
