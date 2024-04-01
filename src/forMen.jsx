@@ -7,7 +7,9 @@ export function ForMen() {
       <div className="for-men">
         {/* Travis Scott */}
         <div className="mainTravis-div">
-          <div className="TravisScott-div"></div>
+          <div className="TravisScott-div">
+            <button className="shop-now">Shop Now</button>
+          </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Jordan 1 Retro High OG SP</h1>
             <hr></hr>
@@ -17,7 +19,9 @@ export function ForMen() {
 
         {/* Ripped Jeans */}
         <div className="mainRipped-div">
-          <div className="RippedJeans-div"></div>
+          <div className="RippedJeans-div">
+            <button className="shop-now">Shop Now</button>
+          </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Men Stacked Ripped Jeans</h1>
             <hr></hr>
@@ -27,7 +31,9 @@ export function ForMen() {
 
         {/* Puffer Jacket */}
         <div className="mainJacket-div">
-          <div className="PufferJacket-div"></div>
+          <div className="PufferJacket-div">
+            <button className="shop-now">Shop Now</button>
+          </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Men Hooded Puffer Jacket</h1>
             <hr></hr>
