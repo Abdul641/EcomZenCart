@@ -41,6 +41,37 @@ export function ForMen() {
           </div>
         </div>
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+    </>
+  );
+}
+
+// New Arrivals Alert: Don't Miss Out on the Latest Trends
+export default function ImageComponent() {
+  return (
+    <>
+      <div className="image"></div>
+      <NewArrival />
+    </>
+  );
+}
+
+function NewArrival() {
+  return (
+    <>
+      <div className="new-arrival">
+        <br></br>
+        <h1 className="new-arrival-title">New Arrivals</h1>
+        <h2 className="new-arrival-description">
+          {"Don't Miss Out on the Latest Trends"}
+        </h2>
+        <div className="new-arrival-buttons">
+          <button className="new-arrival-button">Shop Men</button>
+          <button className="new-arrival-button">Shop Women</button>
+        </div>
+      </div>
     </>
   );
 }

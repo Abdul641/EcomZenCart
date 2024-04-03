@@ -2,6 +2,7 @@ import { createContext } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NavBar } from "./navbar";
 import { Home } from "./home";
+
 // context
 const ShopContext = createContext({
   addToCart: () => {},

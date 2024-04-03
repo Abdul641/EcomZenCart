@@ -1,57 +1,46 @@
 import { useState } from "react";
 import "./index.css";
 import { Outlet, Link } from "react-router-dom";
-
+import ImageComponent from "./forMen";
 export function NavBar() {
   return (
     <>
-      <div className="nav">
-        {/* Left Side */}
-        <div className="left-side">
-          <ul>
-            <li>Men</li>
-            <li>Women</li>
-            <li>Kids</li>
-          </ul>
+      <nav>
+        <div className="nav">
+          {/* Left Side */}
+          <div className="left-side">
+            <ul>
+              <li>Men</li>
+              <li>Women</li>
+              <li>Kids</li>
+            </ul>
+          </div>
+          {/* Logo */}
+          <div className="logo">
+            <h1 className="font-black text-3xl">ZenCart</h1>
+          </div>
+          {/* Right Side */}
+          <div className="right-side">
+            <ul>
+              <li>Language</li>
+              <li>Return & Orders</li>
+              <Search />
+              <Cart />
+            </ul>
+          </div>
         </div>
-        {/* Logo */}
-        <div className="logo">
-          <h1 className="font-black text-3xl">ZenCart</h1>
-        </div>
-        {/* Right Side */}
-        <div className="right-side">
-          <ul>
-            <li>Language</li>
-            <li>Return & Orders</li>
-            <Search />
-            <Cart />
-          </ul>
-        </div>
-      </div>
+      </nav>
       <br></br>
       <br></br>
       <br></br>
-
       {/* Home */}
       <div className="home-section">
         <Outlet />
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      {/* New Arrivals */}
+      <div className="new-arrivals">
+        <ImageComponent />
+      </div>
       <br></br>
       <br></br>
       <br></br>
