@@ -68,10 +68,11 @@ function NewArrival() {
         <h2 className="new-arrival-description">
           {"Don't Miss Out on the Latest Trends"}
         </h2>
-        {/* <div className="new-arrival-buttons">
+        <div className="new-arrival-buttons">
           <button className="new-arrival-button">Shop Men</button>
           <button className="new-arrival-button">Shop Women</button>
-        </div> */}
+        </div>
+        <br></br>
         <NewArrivalProducts />
       </div>
     </>
