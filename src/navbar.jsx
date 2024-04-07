@@ -41,14 +41,14 @@ export function NavBar() {
       <div className="new-arrivals">
         <ImageComponent />
       </div>
+      {/* <br></br>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
+      <br></br> */}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import logo from "../src/assets/nike-air-max..jpeg";
 import "./styles/newArrival.css";
 import { useRef, useEffect, useState } from "react";
-
+import { Footer } from "./footer";
 const productNames = [
   "LZLER Mens Ripped Jeans",
   "Nike Air Max",
@@ -9,6 +9,7 @@ const productNames = [
   "Puma RS-X",
   "New Balance 574",
   "Nike Sportswear Tech",
+  "Men's Casual Cargo Pants",
 ];
 const productDescriptions = [
   "Distressed Destroyed Slim Fit Straight",
@@ -17,6 +18,7 @@ const productDescriptions = [
   "Modern and sleek sneakers",
   "Vintage-inspired sneakers",
   "Men's Full-Zip Hoodie",
+  "Military Army Camo Pants Combat",
 ];
 
 const productsPicture = [
@@ -26,6 +28,7 @@ const productsPicture = [
   "../src/assets/PumaRSX.avif",
   "../src/assets/Balance574.webp",
   "../src/assets/nikeTech.jpg",
+  "../src/assets/cargoPants.jpg",
 ];
 
 const productPrice = [
@@ -34,7 +37,8 @@ const productPrice = [
   "$79.99",
   "$59.99",
   "$69.99",
-  "$49.99",
+  "$34.99",
+  "$42.99",
 ];
 
 export default function NewArrivalProducts() {
@@ -49,6 +53,7 @@ export default function NewArrivalProducts() {
   return (
     <>
       <br></br>
+
       <div className="for-men-NewArrival" ref={scrollContainerRef}>
         {productNames.map((productName, index) => (
           <div key={index} className="new-arrival-mainDiv">
