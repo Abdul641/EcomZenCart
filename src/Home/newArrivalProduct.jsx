@@ -1,5 +1,4 @@
-import logo from "../src/assets/nike-air-max..jpeg";
-import "./styles/newArrival.css";
+import "../styles/newArrival.css";
 import { useRef, useEffect, useState } from "react";
 import { Footer } from "./footer";
 const productNames = [

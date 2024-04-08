@@ -1,4 +1,4 @@
-import "./index.css";
+import "../index.css";
 import NewArrivalProducts from "./newArrivalProduct";
 import { Footer } from "./footer";
 export function ForMen() {
@@ -76,7 +76,7 @@ function NewArrival() {
         <br></br>
         <NewArrivalProducts />
         <br></br>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

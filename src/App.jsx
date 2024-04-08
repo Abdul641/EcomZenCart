@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavBar } from "./navbar";
+import { NavBar } from "./Home/navbar";
 
 function App() {
   return (

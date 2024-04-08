@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./index.css";
+import "../index.css";
 import { Outlet, Link } from "react-router-dom";
-import ImageComponent from "./forMen";
+import { Footer } from "./footer";
 export function NavBar() {
   return (
     <>
@@ -10,14 +10,19 @@ export function NavBar() {
           {/* Left Side */}
           <div className="left-side">
             <ul>
-              <li>Men</li>
+              <li>
+                <Link to="/men">Men</Link>
+              </li>
               <li>Women</li>
               <li>Kids</li>
             </ul>
           </div>
           {/* Logo */}
           <div className="logo">
-            <h1 className="font-black text-3xl">ZenCart</h1>
+            <h1 className="font-black text-3xl">
+              {/* ZenCart */}
+              <Link to="/">ZenCart</Link>
+            </h1>
           </div>
           {/* Right Side */}
           <div className="right-side">
@@ -37,18 +42,7 @@ export function NavBar() {
       <div className="home-section">
         <Outlet />
       </div>
-      {/* New Arrivals */}
-      <div className="new-arrivals">
-        <ImageComponent />
-      </div>
-      {/* <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br> */}
+      <Footer />
     </>
   );
 }

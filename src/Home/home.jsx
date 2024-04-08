@@ -1,8 +1,9 @@
-import "./index.css";
-import { useState, useEffect } from "react";
+import "../index.css";
+import { useState } from "react";
 import { ForMen } from "./forMen";
 import { ForWomen } from "./forWomen";
-import { fetchProducts } from "./fetch";
+import ImageComponent from "./forMen";
+
 export function Home() {
   return (
     <>
@@ -19,6 +20,7 @@ export function Home() {
 
       {/* Top Picks */}
       <TopPicks />
+      <ImageComponent />
     </>
   );
 }
@@ -88,5 +90,3 @@ function ForKids() {
     </>
   );
 }
-
-fetchProducts();
