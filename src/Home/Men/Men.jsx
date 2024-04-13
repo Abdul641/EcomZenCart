@@ -1,7 +1,10 @@
 import { Footer } from "../footer";
 import FetchProducts from "./fetch";
+import { useState, useEffect, useContext } from "react";
 import "./men.css";
-export function ForMen() {
+import ShopContext from "../../router";
+
+export function ForMen({ products, loading }) {
   return (
     <>
       <div className="For-Men">
@@ -11,7 +14,7 @@ export function ForMen() {
 
         {/* Fetching products from api */}
         <div className="fetching">
-          <FetchProducts />
+          <FetchProducts products={products} loading={loading} />
         </div>
       </div>
     </>

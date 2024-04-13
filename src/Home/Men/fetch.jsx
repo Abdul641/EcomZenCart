@@ -1,30 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./men.css";
 import { Link } from "react-router-dom";
 
-const FetchProducts = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const request = await fetch(
-          "https://mock.shop/api?query={products(first:%2020){edges%20{node%20{id%20title%20description%20featuredImage%20{id%20url}%20variants(first:%203){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}"
-        );
-        const response = await request.json();
-
-        const productData = response.data.products.edges;
-        setProducts(productData);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
+const FetchProducts = ({ products, loading }) => {
   return (
     <>
       {loading ? (
