@@ -54,3 +54,7 @@
   justify-content: center;
   font-size: 25px;
 }
+
+.product-img-div {
+  cursor: pointer;
+}

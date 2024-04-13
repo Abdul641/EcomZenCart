@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./men.css";
+import { Link } from "react-router-dom";
+
 const FetchProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,11 +16,7 @@ const FetchProducts = () => {
 
         const productData = response.data.products.edges;
         setProducts(productData);
-        setLoading(false); // Set loading to false when data is fetched
-        console.log(
-          response.data.products.edges[1].node.variants.edges[0].node.price
-            .amount
-        );
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -35,17 +33,21 @@ const FetchProducts = () => {
         <div className="products-for-men">
           {products.slice(0, 5).map((product) => (
             <div className="indivualProcuts" key={product.node.id}>
-              <div className="product-img-div">
-                <img
-                  className="img-products"
-                  src={product.node.featuredImage.url}
-                  alt={product.node.title}
-                />
-              </div>
-              <div className="product-content">
-                <h2 className="product-title">{product.node.title}</h2>
-                <h2 className="product-price"></h2>
-              </div>
+              <Link key={product.node.id} to={"/" + product.node.title}>
+                <div className="product-img-div">
+                  <img
+                    className="img-products"
+                    src={product.node.featuredImage.url}
+                    alt={product.node.title}
+                  />
+                </div>
+                <div className="product-content">
+                  <h2 className="product-title">{product.node.title}</h2>
+                  <h2 className="product-price">
+                    ${product.node.variants.edges[0].node.price.amount}
+                  </h2>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
