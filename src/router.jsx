@@ -1,3 +1,4 @@
+import ForWomen from "./Home/Women/WomenHead";
 import { createContext } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NavBar } from "./Home/navbar";
@@ -5,7 +6,6 @@ import { Home } from "./Home/home";
 import { ForMen } from "./Home/Men/Men";
 import ProductDetail from "./Home/Men/productDetail";
 import { useState, useEffect } from "react";
-
 // context
 
 const addToCart = (product, quantity) => {
@@ -13,13 +13,22 @@ const addToCart = (product, quantity) => {
     id: product.node.id,
     title: product.node.title,
     price: product.node.variants.edges[0].node.price.amount,
+    quantity: quantity,
   };
 
-  productInCart.push(cartProduct);
-  console.log(productInCart);
+  const existingProduct = productInCart.find(
+    (item) => item.title === cartProduct.title
+  );
+
+  if (existingProduct) {
+    existingProduct.quantity += quantity;
+  } else {
+    productInCart.push(cartProduct);
+    console.log(productInCart);
+  }
 };
 
-const productInCart = [];
+export const productInCart = [];
 
 export const ShopContext = createContext({
   addToCart,
@@ -41,6 +50,7 @@ const Router = () => {
         const productData = response.data.products.edges;
         setProducts(productData);
         setLoading(false);
+        console.log(productData);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -58,6 +68,10 @@ const Router = () => {
         {
           path: "men",
           element: <ForMen products={products} loading={loading} />,
+        },
+        {
+          path: "women",
+          element: <ForWomen products={products} loading={loading} />,
         },
         {
           path: "/:title",

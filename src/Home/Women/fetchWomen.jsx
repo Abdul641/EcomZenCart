@@ -1,15 +1,14 @@
-import { useEffect, useState, useContext } from "react";
-import "./men.css";
+// import "./men.css";
 import { Link } from "react-router-dom";
 
-const FetchProducts = ({ products, loading }) => {
+const FetchWomenProducts = ({ products, loading }) => {
   return (
     <>
       {loading ? (
         <div className="loading">Loading...</div>
       ) : (
         <div className="products-for-men">
-          {products.slice(0, 5).map((product) => (
+          {products.slice(6, 11).map((product) => (
             <div className="indivualProcuts" key={product.node.id}>
               <Link key={product.node.id} to={"/" + product.node.title}>
                 <div className="product-img-div">
@@ -34,4 +33,5 @@ const FetchProducts = ({ products, loading }) => {
   );
 };
 // women 6 - 11
-export default FetchProducts;
+// Kids
+export default FetchWomenProducts;
