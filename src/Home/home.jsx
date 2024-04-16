@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ForMen } from "./forMen";
 import { ForWomen } from "./forWomen";
 import ImageComponent from "./forMen";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -11,8 +12,13 @@ export function Home() {
         <div className="img-div">
           <div className="img-content">
             <h1 id="evaluate">Elevate your look, endless possibilities</h1>
-            <button className="men-home-button">Men</button>
-            <button className="men-home-button">Women</button>
+            <Link to="/men">
+              <button className="men-home-button"> Men </button>
+            </Link>
+
+            <Link to="/women">
+              <button className="men-home-button"> Women </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import ProductDetail from "./Home/Men/productDetail";
 import { useState, useEffect } from "react";
 // context
 
-const addToCart = (product, quantity) => {
+const addToCart = (product, quantity, setProductInCart) => {
   let cartProduct = {
     id: product.node.id,
     title: product.node.title,
@@ -24,7 +24,7 @@ const addToCart = (product, quantity) => {
     existingProduct.quantity += quantity;
   } else {
     productInCart.push(cartProduct);
-    console.log(productInCart);
+    console.log(productInCart.length);
   }
 };
 
@@ -50,7 +50,7 @@ const Router = () => {
         const productData = response.data.products.edges;
         setProducts(productData);
         setLoading(false);
-        console.log(productData);
+        // console.log(productData);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
