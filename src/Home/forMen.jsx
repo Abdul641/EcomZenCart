@@ -1,6 +1,7 @@
 import "../index.css";
 import NewArrivalProducts from "./newArrivalProduct";
 import { Footer } from "./footer";
+import { Link } from "react-router-dom";
 export function ForMen() {
   return (
     <>
@@ -70,8 +71,13 @@ function NewArrival() {
           {"Don't Miss Out on the Latest Trends"}
         </h2>
         <div className="new-arrival-buttons">
-          <button className="new-arrival-button">Shop Men</button>
-          <button className="new-arrival-button">Shop Women</button>
+          <Link to="/men">
+            <button className="new-arrival-button">Shop Men </button>
+          </Link>
+
+          <Link to="/women">
+            <button className="new-arrival-button">Shop Women </button>
+          </Link>
         </div>
         <br></br>
         <NewArrivalProducts />

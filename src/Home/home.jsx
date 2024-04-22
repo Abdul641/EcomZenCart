@@ -4,7 +4,7 @@ import { ForMen } from "./forMen";
 import { ForWomen } from "./forWomen";
 import ImageComponent from "./forMen";
 import { Link } from "react-router-dom";
-
+import { ForKids } from "./forKids";
 export function Home() {
   return (
     <>
@@ -84,15 +84,5 @@ function TopPicks() {
         </div>
       )}
     </div>
-  );
-}
-
-function ForKids() {
-  return (
-    <>
-      <div className="for-kids">
-        <h1>For Kids</h1>
-      </div>
-    </>
   );
 }
