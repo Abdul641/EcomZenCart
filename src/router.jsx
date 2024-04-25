@@ -6,6 +6,7 @@ import { Home } from "./Home/home";
 import { ForMen } from "./Home/Men/Men";
 import ProductDetail from "./Home/Men/productDetail";
 import { useState, useEffect } from "react";
+import { CartDetail } from "./Home/Cart/cartDetail";
 // context
 
 const addToCart = (product, quantity, setProductInCart) => {
@@ -14,6 +15,7 @@ const addToCart = (product, quantity, setProductInCart) => {
     title: product.node.title,
     price: product.node.variants.edges[0].node.price.amount,
     quantity: quantity,
+    images: product.node.featuredImage.url,
   };
 
   const existingProduct = productInCart.find(
@@ -22,8 +24,10 @@ const addToCart = (product, quantity, setProductInCart) => {
 
   if (existingProduct) {
     existingProduct.quantity += quantity;
+    console.log(productInCart);
   } else {
     productInCart.push(cartProduct);
+    console.log(productInCart);
     console.log(productInCart.length);
   }
 };
@@ -76,6 +80,10 @@ const Router = () => {
         {
           path: "/:title",
           element: <ProductDetail products={products} />,
+        },
+        {
+          path: "/cart",
+          element: <CartDetail productInCart={productInCart} />,
         },
       ],
     },

@@ -1,0 +1,26 @@
+.No-Items {
+  text-align: center;
+  padding: 20px;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.click-here {
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(89, 89, 89);
+  font-size: larger;
+  font-weight: 450;
+}
+
+.Back-to-home {
+  text-align: center;
+  color: blue;
+  cursor: pointer;
+  font-size: large;
+}
+
+.Back-to-home:hover {
+  text-decoration: underline;
+}
