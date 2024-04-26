@@ -24,3 +24,46 @@
 .Back-to-home:hover {
   text-decoration: underline;
 }
+.Empty-cart {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.single-product {
+  display: flex;
+  border-bottom: 2.5px solid #ccc;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 25px;
+  margin-top: 10px;
+}
+
+.single-products-description {
+  margin-top: 20px;
+}
+
+.p.item-price {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.img-cart-products {
+  background-image: url(/src/assets/2ndNewJeans.png);
+  height: 180px;
+  max-width: 100%;
+  border-radius: 20px;
+  margin-right: 25px;
+  /* margin-left: 25px; */
+  margin-top: 25px;
+}
+
+.item-price,
+.item-quantity {
+  font-size: 19px;
+  padding-bottom: 5px;
+}
+
+.item-title {
+  font-size: 25px;
+  font-weight: 700;
+}

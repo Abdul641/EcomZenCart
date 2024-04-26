@@ -12,6 +12,7 @@ import { CartDetail } from "./Home/Cart/cartDetail";
 const addToCart = (product, quantity, setProductInCart) => {
   let cartProduct = {
     id: product.node.id,
+    description: product.node.description,
     title: product.node.title,
     price: product.node.variants.edges[0].node.price.amount,
     quantity: quantity,
@@ -32,7 +33,15 @@ const addToCart = (product, quantity, setProductInCart) => {
   }
 };
 
-export const productInCart = [];
+export const productInCart = [
+  // {
+  //   id: 28082,
+  //   description: "This is a testing product",
+  //   title: "Testing Product",
+  //   price: 19.95,
+  //   quantity: 3,
+  // },
+];
 
 export const ShopContext = createContext({
   addToCart,

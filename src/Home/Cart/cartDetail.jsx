@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 export function CartDetail({ productInCart }) {
   return (
     <>
-      <div>
-        <div>
+      <br></br>
+      <br></br>
+      <div className="cart-detail-main-container">
+        <div className="cart-detail-container">
           {productInCart.length === 0 ? (
             <div className="Empty-cart">
               <p className="No-Items">Cart is Empty</p>
@@ -22,14 +24,24 @@ export function CartDetail({ productInCart }) {
           ) : (
             productInCart.map((item, index) => (
               <div key={index}>
-                <img className="img-products" src={item.images} />
-                <h2>{item.title}</h2>
-                <p>Price: ${item.price}</p>
-                <p>Quantity: {item.quantity}</p>
+                <Link className="single-product" to={"/" + item.title}>
+                  <img className="img-cart-products" src={item.images} />
+                  <div className="single-products-description">
+                    <h2 className="item-title">{item.title}</h2>
+                    <p className="item-price">Price: ${item.price}</p>
+                    <p className="item-quantity">Quantity: {item.quantity}</p>
+                    <h2 className="item-description">{item.description}</h2>
+                  </div>
+                  <br></br>
+                </Link>
               </div>
             ))
           )}
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
     </>
   );

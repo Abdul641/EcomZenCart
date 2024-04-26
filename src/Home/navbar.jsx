@@ -6,7 +6,7 @@ import { ShopContext } from "../router";
 import { productInCart } from "../router";
 
 export function NavBar() {
-  const { productInCart } = useContext(ShopContext);
+const { productInCart } = useContext(ShopContext);
 
   return (
     <>
