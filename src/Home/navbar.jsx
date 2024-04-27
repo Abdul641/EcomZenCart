@@ -5,6 +5,7 @@ import { Footer } from "./footer";
 import { ShopContext } from "../router";
 import { productInCart } from "../router";
 import { totalPrice } from "../router";
+
 export function numberOfProductsInCart() {
   return productInCart.length;
 }

@@ -23,7 +23,7 @@ export function CartDetail({ productInCart, totalCost }) {
             </div>
           ) : (
             productInCart.map((item, index) => (
-              <div key={index}>
+              <div className="left-side" key={index}>
                 <Link className="single-product" to={"/" + item.title}>
                   <img className="img-cart-products" src={item.images} />
                   <div className="single-products-description">
@@ -38,23 +38,35 @@ export function CartDetail({ productInCart, totalCost }) {
             ))
           )}
         </div>
+        <div className="checkout-section">
+          {productInCart.length === 0 ? null : (
+            <CheckoutSection
+              productCart={productInCart}
+              totalCost={totalCost}
+            />
+          )}
+        </div>
         <br></br>
         <br></br>
         <br></br>
         <br></br>
       </div>
-      <div className="checkout-section">
+      {/* <div className="checkout-section">
         <CheckoutSection totalCost={totalCost} />
-      </div>
+      </div> */}
     </>
   );
 }
 
-export function CheckoutSection({ totalCost }) {
+export function CheckoutSection({ productCart, totalCost }) {
   return (
     <>
-      <div>
-        <h1>This is the left section{totalCost}</h1>
+      <div className="total">
+        <h1 className="sub-total">
+          Subtotal <span className="product-length">{productCart.length} </span>{" "}
+          items: <span className="price"> ${totalCost}</span>
+        </h1>
+        <button className="proceed-to-checkout">Proceed to checkout</button>
       </div>
     </>
   );
