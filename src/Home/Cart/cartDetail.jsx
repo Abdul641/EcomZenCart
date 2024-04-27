@@ -1,6 +1,6 @@
 import "./cartDetail.css";
 import { Link } from "react-router-dom";
-export function CartDetail({ productInCart }) {
+export function CartDetail({ productInCart, totalCost }) {
   return (
     <>
       <br></br>
@@ -42,6 +42,19 @@ export function CartDetail({ productInCart }) {
         <br></br>
         <br></br>
         <br></br>
+      </div>
+      <div className="checkout-section">
+        <CheckoutSection totalCost={totalCost} />
+      </div>
+    </>
+  );
+}
+
+export function CheckoutSection({ totalCost }) {
+  return (
+    <>
+      <div>
+        <h1>This is the left section{totalCost}</h1>
       </div>
     </>
   );

@@ -7,9 +7,15 @@ import { ForMen } from "./Home/Men/Men";
 import ProductDetail from "./Home/Men/productDetail";
 import { useState, useEffect } from "react";
 import { CartDetail } from "./Home/Cart/cartDetail";
+import { numberOfProductsInCart } from "./Home/navbar";
 // context
 
-const addToCart = (product, quantity, setProductInCart) => {
+export const productInCart = [];
+export let totalPrice = [];
+
+const addToCart = (product, quantity) => {
+  numberOfProductsInCart();
+
   let cartProduct = {
     id: product.node.id,
     description: product.node.description,
@@ -19,33 +25,33 @@ const addToCart = (product, quantity, setProductInCart) => {
     images: product.node.featuredImage.url,
   };
 
-  const existingProduct = productInCart.find(
+  const existingProductIndex = productInCart.findIndex(
     (item) => item.title === cartProduct.title
   );
 
-  if (existingProduct) {
-    existingProduct.quantity += quantity;
-    console.log(productInCart);
+  if (existingProductIndex !== -1) {
+    productInCart[existingProductIndex].quantity += quantity;
   } else {
     productInCart.push(cartProduct);
-    console.log(productInCart);
-    console.log(productInCart.length);
   }
+
+  totalPrice[0] = findingTotalPrice();
 };
 
-export const productInCart = [
-  // {
-  //   id: 28082,
-  //   description: "This is a testing product",
-  //   title: "Testing Product",
-  //   price: 19.95,
-  //   quantity: 3,
-  // },
-];
+const findingTotalPrice = () => {
+  let sum = 0;
+  for (let i = 0; i < productInCart.length; i++) {
+    sum += productInCart[i].price * productInCart[i].quantity;
+  }
+  totalPrice = [sum];
+  console.log(totalPrice);
+  return sum;
+};
 
 export const ShopContext = createContext({
   addToCart,
   productInCart,
+  totalPrice,
 });
 
 const Router = () => {
@@ -70,7 +76,7 @@ const Router = () => {
     };
 
     fetchProducts();
-  }, []);
+  });
 
   const router = createBrowserRouter([
     {
@@ -92,7 +98,9 @@ const Router = () => {
         },
         {
           path: "/cart",
-          element: <CartDetail productInCart={productInCart} />,
+          element: (
+            <CartDetail productInCart={productInCart} totalCost={totalPrice} />
+          ),
         },
       ],
     },
