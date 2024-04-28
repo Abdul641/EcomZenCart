@@ -1,9 +1,32 @@
 .img-products-sneaker {
   height: 300px;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .img-products-GapShirt {
   height: 300px;
   width: 288px;
+}
+
+.indivualProcuts {
+  cursor: pointer;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  width: 120px;
+  color: black;
+  height: 20px;
+  -webkit-mask: radial-gradient(circle closest-side, #000 94%, #0000) left/20%
+    100%;
+  background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
+  animation: l17 2s infinite steps(6);
+}
+@keyframes l17 {
+  100% {
+    background-size: 120% 100%;
+  }
 }

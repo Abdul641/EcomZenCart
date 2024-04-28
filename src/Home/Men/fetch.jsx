@@ -12,10 +12,22 @@ const FetchProducts = ({ products, loading }) => {
   return (
     <>
       {loading ? (
-        <div className="loading">Loading...</div>
+        <div className="loading-main">
+          <div className="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       ) : (
         <div className="products-for-men">
           <Products />
+
           {products.slice(0, 5).map((product) => (
             <div className="indivualProcuts" key={product.node.id}>
               <Link key={product.node.id} to={"/" + product.node.title}>

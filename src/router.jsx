@@ -70,6 +70,7 @@ const Router = () => {
         setProducts(productData);
         setLoading(false);
         // console.log(productData);
+        localStorage.setItem("products", JSON.stringify(productData));
       } catch (error) {
         console.error("Error fetching products:", error);
       }
