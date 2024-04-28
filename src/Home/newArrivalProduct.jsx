@@ -9,6 +9,7 @@ export const productNames = [
   "New Balance 574",
   "Nike Sportswear Tech",
   "Men's Cargo Pants",
+  "Jordan 1 Retro",
 ];
 export const productDescriptions = [
   "Distressed Destroyed Slim Fit Straight",
@@ -28,6 +29,7 @@ export const productsPicture = [
   "../src/assets/Balance574.webp",
   "../src/assets/nikeTech.jpg",
   "../src/assets/cargoPants.jpg",
+  "../src/assets/TravisScottPerson.jpeg",
 ];
 
 export const productPrice = [
@@ -38,6 +40,7 @@ export const productPrice = [
   "$69.99",
   "$34.99",
   "$42.99",
+  "$2,661.0",
 ];
 
 export default function NewArrivalProducts() {
@@ -54,7 +57,7 @@ export default function NewArrivalProducts() {
       <br></br>
 
       <div className="for-men-NewArrival" ref={scrollContainerRef}>
-        {productNames.map((productName, index) => (
+        {productNames.slice(0, 7).map((productName, index) => (
           <div key={index} className="new-arrival-mainDiv">
             <div className="Arrivals-button">
               <img className="new-arrival-image" src={productsPicture[index]} />
