@@ -54,4 +54,6 @@
 
 .product-img-div {
   cursor: pointer;
+  justify-content: center;
+  display: flex;
 }

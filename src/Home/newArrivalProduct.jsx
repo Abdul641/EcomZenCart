@@ -1,16 +1,16 @@
 import "../styles/newArrival.css";
 import { useRef, useEffect, useState } from "react";
 import { Footer } from "./footer";
-const productNames = [
-  "LZLER Mens Ripped Jeans",
+export const productNames = [
+  "Mens Ripped Jeans",
   "Nike Air Max",
   "Adidas Superstar",
   "Puma RS-X",
   "New Balance 574",
   "Nike Sportswear Tech",
-  "Men's Casual Cargo Pants",
+  "Men's Cargo Pants",
 ];
-const productDescriptions = [
+export const productDescriptions = [
   "Distressed Destroyed Slim Fit Straight",
   "Comfortable and stylish sneakers",
   "Classic sneakers with iconic design",
@@ -20,7 +20,7 @@ const productDescriptions = [
   "Military Army Camo Pants Combat",
 ];
 
-const productsPicture = [
+export const productsPicture = [
   "../src/assets/rippedJeansNew.jpg",
   "../src/assets/nike-air-max..jpeg",
   "../src/assets/adidasSuperStar.webp",
@@ -30,7 +30,7 @@ const productsPicture = [
   "../src/assets/cargoPants.jpg",
 ];
 
-const productPrice = [
+export const productPrice = [
   "$29.99",
   "$119.99",
   "$79.99",
