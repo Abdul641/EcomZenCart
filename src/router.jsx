@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { CartDetail } from "./Home/Cart/cartDetail";
 import { numberOfProductsInCart } from "./Home/navbar";
 import ForKids from "./Home/Kids/KidsHead";
+import ProductCodedDetail from "./Home/HardCodedDetail";
 // context
 
 export const productInCart = [];
@@ -77,7 +78,7 @@ const Router = () => {
     };
 
     fetchProducts();
-  });
+  }, []);
 
   const router = createBrowserRouter([
     {
@@ -106,6 +107,10 @@ const Router = () => {
           element: (
             <CartDetail productInCart={productInCart} totalCost={totalPrice} />
           ),
+        },
+        {
+          path: "coded/:name",
+          element: <ProductCodedDetail />,
         },
       ],
     },

@@ -19,6 +19,7 @@ export const productDescriptions = [
   "Vintage-inspired sneakers",
   "Men's Full-Zip Hoodie",
   "Military Army Camo Pants Combat",
+  "Step into the world of music and style with the Jordan Travis Scotts sneakers, a collaboration between Jordan Brand and the iconic rapper Travis Scott.",
 ];
 
 export const productsPicture = [

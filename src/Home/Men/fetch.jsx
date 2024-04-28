@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import "./men.css";
 import { Link } from "react-router-dom";
 import { ForMensCoded } from "./MenHardCoded";
+
 import {
   productNames,
   productsPicture,
@@ -57,7 +58,11 @@ const Products = () => {
   return (
     <div className="products-for-men">
       {productNames.map((productName, index) => (
-        <div className="indivualProcuts" key={index}>
+        <Link
+          to={"/coded/" + productName} // Link to the 'coded/:name' route with the product name
+          key={index}
+          className="indivualProcuts"
+        >
           <div className="product-img-div">
             <img
               className="img-products"
@@ -69,10 +74,14 @@ const Products = () => {
             <h1 className="product-title">{productName}</h1>
             <h2 className="product-price">{productPrice[index]}</h2>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
 };
+
+function removeSpaces(url) {
+  return encodeURIComponent(decodeURIComponent(url).replace(/\s+/g, ""));
+}
 
 export default FetchProducts;
