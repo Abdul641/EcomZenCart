@@ -8,6 +8,7 @@ import ProductDetail from "./Home/Men/productDetail";
 import { useState, useEffect } from "react";
 import { CartDetail } from "./Home/Cart/cartDetail";
 import { numberOfProductsInCart } from "./Home/navbar";
+import ForKids from "./Home/Kids/KidsHead";
 // context
 
 export const productInCart = [];
@@ -44,7 +45,6 @@ const findingTotalPrice = () => {
     sum += productInCart[i].price * productInCart[i].quantity;
   }
   totalPrice = [sum];
-  console.log(totalPrice);
   return sum;
 };
 
@@ -91,6 +91,10 @@ const Router = () => {
         {
           path: "women",
           element: <ForWomen products={products} loading={loading} />,
+        },
+        {
+          path: "kids",
+          element: <ForKids products={products} loading={loading} />,
         },
         {
           path: "/:title",

@@ -25,7 +25,9 @@ export function NavBar() {
               <li>
                 <Link to="/women">Women</Link>
               </li>
-              <li>Kids</li>
+              <li>
+                <Link to="/kids">Kids</Link>
+              </li>
             </ul>
           </div>
           {/* Logo */}
