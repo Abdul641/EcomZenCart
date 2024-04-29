@@ -7,25 +7,51 @@ import {
   productPrice,
 } from "./newArrivalProduct";
 import { ShopContext } from "../router";
+import { productInCart } from "../router";
+import { numberOfProductsInCart } from "./navbar";
+import { totalPrice, findingTotalPrice } from "../router";
+
+export const addToCartHard = (product, quantity) => {
+  numberOfProductsInCart();
+  let cartProduct = {
+    description: product.description,
+    title: product.title,
+    price: product.price,
+    quantity: quantity,
+    images: product.image,
+  };
+  const existingProductIndex = productInCart.findIndex(
+    (item) => item.title === cartProduct.title
+  );
+  if (existingProductIndex !== -1) {
+    productInCart[existingProductIndex].quantity += quantity;
+  } else {
+    productInCart.push(cartProduct);
+  }
+  totalPrice[0] = findingTotalPrice();
+};
+
 import "./HardCoded.css";
-export default function ProductDetail() {
-  const { addToCart } = useContext(ShopContext);
+
+export default function ProductCodedDetail() {
+  // const { addToCartHard } = useContext(ShopContext);
   const [quantity, setQuantity] = useState(1);
   const { name } = useParams();
 
-  // Find the index of the product in the arrays based on the title
   const index = productNames.findIndex((productName) => productName === name);
-  console.log(name);
-  // If the product doesn't exist, return loading or handle error
+
   if (index === -1) {
     return <div>Product not found</div>;
   }
+
+  const priceWithDollarSign = productPrice[index];
+  const priceWithoutDollarSign = priceWithDollarSign.replace("$", "");
 
   const product = {
     title: productNames[index],
     description: productDescriptions[index],
     image: productsPicture[index],
-    price: productPrice[index],
+    price: priceWithoutDollarSign,
   };
 
   const increaseQuantity = () => {
@@ -39,7 +65,8 @@ export default function ProductDetail() {
   };
 
   const handleAddToCart = () => {
-    addToCart(product, quantity);
+    addToCartHard(product, quantity);
+    console.log(productInCart);
   };
 
   return (

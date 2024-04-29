@@ -10,6 +10,7 @@ import { CartDetail } from "./Home/Cart/cartDetail";
 import { numberOfProductsInCart } from "./Home/navbar";
 import ForKids from "./Home/Kids/KidsHead";
 import ProductCodedDetail from "./Home/HardCodedDetail";
+import { addToCartHard } from "./Home/HardCodedDetail";
 // context
 
 export const productInCart = [];
@@ -40,7 +41,7 @@ const addToCart = (product, quantity) => {
   totalPrice[0] = findingTotalPrice();
 };
 
-const findingTotalPrice = () => {
+export const findingTotalPrice = () => {
   let sum = 0;
   for (let i = 0; i < productInCart.length; i++) {
     sum += productInCart[i].price * productInCart[i].quantity;
@@ -53,6 +54,7 @@ export const ShopContext = createContext({
   addToCart,
   productInCart,
   totalPrice,
+  addToCartHard,
 });
 
 const Router = () => {
@@ -78,7 +80,7 @@ const Router = () => {
     };
 
     fetchProducts();
-  }, []);
+  });
 
   const router = createBrowserRouter([
     {

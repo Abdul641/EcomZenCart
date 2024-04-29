@@ -1,10 +1,15 @@
 import "./cartDetail.css";
 import { Link } from "react-router-dom";
+
+function roundToNearestTen(number) {
+  return Math.ceil(number);
+}
+
 export function CartDetail({ productInCart, totalCost }) {
   return (
     <>
       <br></br>
-      <br></br>
+
       <div className="cart-detail-main-container">
         <div className="cart-detail-container">
           {productInCart.length === 0 ? (
@@ -64,7 +69,7 @@ export function CheckoutSection({ productCart, totalCost }) {
       <div className="total">
         <h1 className="sub-total">
           Subtotal <span className="product-length">{productCart.length} </span>{" "}
-          items: <span className="price"> ${totalCost}</span>
+          items: <span className="price"> ${roundToNearestTen(totalCost)}</span>
         </h1>
         <button className="proceed-to-checkout">Proceed to checkout</button>
       </div>
