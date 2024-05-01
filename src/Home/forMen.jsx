@@ -10,7 +10,11 @@ export function ForMen() {
         {/* Travis Scott */}
         <div className="mainTravis-div">
           <div className="TravisScott-div">
-            <button className="shop-now">Shop Now</button>
+            <Link
+              to={"/coded/Jordan 1 Retro"} // Link to the 'coded/:name' route with the product name
+            >
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Jordan 1 Retro High OG SP</h1>

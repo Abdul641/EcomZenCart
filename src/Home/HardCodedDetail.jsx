@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   productNames,
@@ -6,10 +6,10 @@ import {
   productsPicture,
   productPrice,
 } from "./newArrivalProduct";
-import { ShopContext } from "../router";
 import { productInCart } from "../router";
 import { numberOfProductsInCart } from "./navbar";
 import { totalPrice, findingTotalPrice } from "../router";
+import "./HardCoded.css";
 
 export const addToCartHard = (product, quantity) => {
   numberOfProductsInCart();
@@ -31,10 +31,7 @@ export const addToCartHard = (product, quantity) => {
   totalPrice[0] = findingTotalPrice();
 };
 
-import "./HardCoded.css";
-
 export default function ProductCodedDetail() {
-  // const { addToCartHard } = useContext(ShopContext);
   const [quantity, setQuantity] = useState(1);
   const { name } = useParams();
 
@@ -88,7 +85,7 @@ export default function ProductCodedDetail() {
           <h2 className="product-title-detail">{product.title}</h2>
           <h2 className="product-description-detail">{product.description}</h2>
           <h2 className="product-price-detail">
-            Price <span className="price-color">{product.price}</span>
+            Price <span className="price-color">$ {product.price}</span>
           </h2>
         </div>
         {/* Payment Section */}
@@ -96,7 +93,7 @@ export default function ProductCodedDetail() {
           {/* Upper Part */}
           <div className="upperPart">
             <h2 className="product-price-detail">
-              Price <span className="price-color">{product.price}</span>
+              Price <span className="price-color">$ {product.price}</span>
             </h2>
             <h2 className="FreeReturns">Free Returns</h2>
             <h2 className="InStock">In Stock</h2>

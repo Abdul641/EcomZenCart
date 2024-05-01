@@ -25,6 +25,9 @@ export function CartDetail({ productInCart, totalCost }) {
                 </Link>{" "}
                 to continue shopping
               </p>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
           ) : (
             productInCart.map((item, index) => (

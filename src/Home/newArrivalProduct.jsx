@@ -41,7 +41,7 @@ export const productPrice = [
   "$69.99",
   "$34.99",
   "$42.99",
-  "$2,661.0",
+  "2,661",
 ];
 
 export default function NewArrivalProducts() {
