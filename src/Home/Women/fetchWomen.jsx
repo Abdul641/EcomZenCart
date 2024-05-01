@@ -55,6 +55,7 @@ const FetchWomenProducts = ({ products, loading }) => {
 
 const Products = () => {
   const slicedProductsPicture = productsPicture.slice(8, 12); // Slice productsPicture accordingly
+  const slicedProductsPrice = productPrice.slice(8, 12); // Slice productsPicture accordingly
 
   return (
     <div className="products-for-men">
@@ -73,7 +74,7 @@ const Products = () => {
           </div>
           <div className="product-content">
             <h1 className="product-title">{productName}</h1>
-            <h2 className="product-price">{productPrice[index]}</h2>
+            <h2 className="product-price">${slicedProductsPrice[index]}</h2>
           </div>
         </Link>
       ))}

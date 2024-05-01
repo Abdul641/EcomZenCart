@@ -14,6 +14,9 @@ export const productNames = [
   "Loafer Shoes",
   "Ladies Dress Watch",
   "Women Hoodie",
+  "Kids Sneaker",
+  "Toddler Sunglasses",
+  "Gap T-Shirt",
 ];
 export const productDescriptions = [
   "Distressed Destroyed Slim Fit Straight",
@@ -27,7 +30,10 @@ export const productDescriptions = [
   "Made from luxurious leather, this purse exudes elegance with its clean lines and understated design",
   "he hallmark of our loafers lies in their sleek and versatile design, featuring refined stitching, a cushioned insole, and a durable outsole for all-day wearability.",
   "Crafted with precision and attention to detail, it typically features a slim and elegant design that exudes femininity. ",
-  "rafted with attention to detail, our hoodies feature a blend of quality materials that provide warmth and durability, ensuring lasting wear.",
+  "Crafted with attention to detail, our hoodies feature a blend of quality materials that provide warmth and durability, ensuring lasting wear.",
+  "Crafted from durable materials and featuring a comfortable fit, they provide support and stability with every step. ",
+  "Designed to fit snugly and securely on tiny faces, each pair features durable frames and UV-blocking lenses to shield delicate eyes from harmful rays.",
+  "A Gap T-shirt is a staple garment known for its quality construction, comfortable fit, and timeless style. Made from soft and durable materials, such as cotton or a cotton blend, Gap T-shirts offer a relaxed yet polished look suitable for everyday wear.",
 ];
 
 export const productsPicture = [
@@ -43,6 +49,9 @@ export const productsPicture = [
   "../src/assets/Loafers.webp",
   "../src/assets/womenWatch.jpg",
   "../src/assets/3rdWomenHoodie.webp",
+  "../src/assets/KidsShoes.jpg",
+  "../src/assets/SecondGlasses.webp",
+  "../src/assets/GapShirt.avif",
 ];
 
 export const productPrice = [
@@ -58,6 +67,9 @@ export const productPrice = [
   "150.00",
   "51.00",
   "54.99",
+  "20.00",
+  "15.00",
+  "25.00",
 ];
 
 export default function NewArrivalProducts() {

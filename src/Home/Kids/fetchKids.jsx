@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { ForKidsCoded } from "./ForKidsHardCoded";
+import {
+  productNames,
+  productsPicture,
+  productPrice,
+} from "../newArrivalProduct";
 
 const FetchKids = ({ products, loading }) => {
   return (
@@ -38,7 +42,7 @@ const FetchKids = ({ products, loading }) => {
               </Link>
             </div>
           ))}
-          <ForKidsCoded />
+          <Products />
         </div>
       )}
     </>
@@ -46,4 +50,34 @@ const FetchKids = ({ products, loading }) => {
 };
 // women 6 - 11
 // Kids
+
+const Products = () => {
+  const slicedProductsPicture = productsPicture.slice(12, 15); // Slice productsPicture accordingly
+  const slicedProductsPrice = productPrice.slice(12, 15); // Slice productsPicture accordingly
+
+  return (
+    <div className="products-for-men">
+      {productNames.slice(12, 15).map((productName, index) => (
+        <Link
+          to={"/coded/" + productName}
+          key={index}
+          className="indivualProcuts"
+        >
+          <div className="product-img-div">
+            <img
+              className="img-products"
+              src={slicedProductsPicture[index]}
+              alt={productName}
+            />
+          </div>
+          <div className="product-content">
+            <h1 className="product-title">{productName}</h1>
+            <h2 className="product-price">${slicedProductsPrice[index]}</h2>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+};
+
 export default FetchKids;
