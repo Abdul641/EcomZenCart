@@ -1,5 +1,5 @@
 import "../index.css";
-
+import { Link } from "react-router-dom";
 export function ForKids() {
   return (
     <>
@@ -8,7 +8,10 @@ export function ForKids() {
         {/* Travis Scott */}
         <div className="mainTravis-div">
           <div className="KidsSneaker-div">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/kids">
+              {" "}
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Troadlop Kids Sneaker</h1>
@@ -20,7 +23,9 @@ export function ForKids() {
         {/* Ripped Jeans */}
         <div className="mainRipped-div">
           <div className="Glasses-div">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/kids">
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans"> Toddler Sunglasses</h1>
@@ -32,7 +37,10 @@ export function ForKids() {
         {/* Puffer Jacket */}
         <div className="mainJacket-div">
           <div className="GapShirt">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/kids">
+              {" "}
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Gap T-Shirt</h1>
