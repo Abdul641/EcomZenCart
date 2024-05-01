@@ -1,5 +1,5 @@
 import "../index.css";
-
+import { Link } from "react-router-dom";
 export function ForWomen() {
   return (
     <>
@@ -8,7 +8,9 @@ export function ForWomen() {
         {/* Travis Scott */}
         <div className="mainTravis-div">
           <div className="HandBag-div">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/women">
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Classic Purse Clutch Shoulder</h1>
@@ -20,7 +22,9 @@ export function ForWomen() {
         {/* Ripped Jeans */}
         <div className="mainRipped-div">
           <div className="Loafers-div">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/women">
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Loafer Women shoes</h1>
@@ -32,7 +36,9 @@ export function ForWomen() {
         {/* Puffer Jacket */}
         <div className="mainJacket-div">
           <div className="WomenWatch-div">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/women">
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Numerals Ladies Dress Watch</h1>
