@@ -11,7 +11,7 @@ export function ForMen() {
         <div className="mainTravis-div">
           <div className="TravisScott-div">
             <Link
-              to={"/coded/Jordan 1 Retro"} // Link to the 'coded/:name' route with the product name
+              to="/men" // Link to the 'coded/:name' route with the product name
             >
               <button className="shop-now">Shop Now</button>
             </Link>
@@ -26,7 +26,10 @@ export function ForMen() {
         {/* Ripped Jeans */}
         <div className="mainRipped-div">
           <div className="RippedJeans-div">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/men">
+              {" "}
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Men Stacked Ripped Jeans</h1>
@@ -38,7 +41,10 @@ export function ForMen() {
         {/* Puffer Jacket */}
         <div className="mainJacket-div">
           <div className="PufferJacket-div">
-            <button className="shop-now">Shop Now</button>
+            <Link to="/men">
+              {" "}
+              <button className="shop-now">Shop Now</button>
+            </Link>
           </div>
           <div className="TravisScott-Content">
             <h1 className="AirJordans">Men Hooded Puffer Jacket</h1>
