@@ -57,7 +57,7 @@ const FetchProducts = ({ products, loading }) => {
 const Products = () => {
   return (
     <div className="products-for-men">
-      {productNames.map((productName, index) => (
+      {productNames.slice(0, 8).map((productName, index) => (
         <Link
           to={"/coded/" + productName} // Link to the 'coded/:name' route with the product name
           key={index}

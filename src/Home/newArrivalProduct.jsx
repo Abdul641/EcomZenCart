@@ -10,6 +10,10 @@ export const productNames = [
   "Nike Sportswear Tech",
   "Men's Cargo Pants",
   "Jordan 1 Retro",
+  "Classic Purse",
+  "Loafer Shoes",
+  "Ladies Dress Watch",
+  "Women Hoodie",
 ];
 export const productDescriptions = [
   "Distressed Destroyed Slim Fit Straight",
@@ -20,6 +24,10 @@ export const productDescriptions = [
   "Men's Full-Zip Hoodie",
   "Military Army Camo Pants Combat",
   "Step into the world of music and style with the Jordan Travis Scotts sneakers, a collaboration between Jordan Brand and the iconic rapper Travis Scott.",
+  "Made from luxurious leather, this purse exudes elegance with its clean lines and understated design",
+  "he hallmark of our loafers lies in their sleek and versatile design, featuring refined stitching, a cushioned insole, and a durable outsole for all-day wearability.",
+  "Crafted with precision and attention to detail, it typically features a slim and elegant design that exudes femininity. ",
+  "rafted with attention to detail, our hoodies feature a blend of quality materials that provide warmth and durability, ensuring lasting wear.",
 ];
 
 export const productsPicture = [
@@ -31,6 +39,10 @@ export const productsPicture = [
   "../src/assets/nikeTech.jpg",
   "../src/assets/cargoPants.jpg",
   "../src/assets/TravisScottPerson.jpeg",
+  "../src/assets/handbag2.webp",
+  "../src/assets/Loafers.webp",
+  "../src/assets/womenWatch.jpg",
+  "../src/assets/3rdWomenHoodie.webp",
 ];
 
 export const productPrice = [
@@ -42,6 +54,10 @@ export const productPrice = [
   "$34.99",
   "$42.99",
   "2,661",
+  "110.0",
+  "150.00",
+  "51.00",
+  "54.99",
 ];
 
 export default function NewArrivalProducts() {
