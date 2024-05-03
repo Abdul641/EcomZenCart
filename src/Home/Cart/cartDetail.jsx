@@ -74,8 +74,14 @@ export function CheckoutSection({ productCart, totalCost }) {
           Subtotal <span className="product-length">{productCart.length} </span>{" "}
           items: <span className="price"> ${roundToNearestTen(totalCost)}</span>
         </h1>
-        <button className="proceed-to-checkout">Proceed to checkout</button>
+        <button onClick={showingMessage} className="proceed-to-checkout">
+          Proceed to checkout
+        </button>
       </div>
     </>
   );
+}
+
+function showingMessage() {
+  alert("If this was a real website you would have made a purchase.");
 }
