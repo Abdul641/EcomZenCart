@@ -1,0 +1,112 @@
+@media (max-width: 1100px) {
+  h1.AirJordans {
+    font-family: var(--text-font);
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 12px;
+  }
+  .for-men {
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 960px) {
+  .for-men {
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .mainJacket-div,
+  .mainRipped-div,
+  .mainTravis-div {
+    height: 23em;
+  }
+  .left-side {
+    justify-content: center;
+    padding: 0px;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .menu-info {
+    width: 100%;
+  }
+  .right-side {
+    width: 50px;
+  }
+
+  .logo {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+  }
+  .nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .img-content {
+    padding-left: 25em;
+  }
+
+  .navigation {
+    display: none; /* Initially hide navigation on smaller screens */
+  }
+
+  .navigation li {
+    display: block; /* Stack links vertically on smaller screens */
+    margin: 0; /* Remove margin between links */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu on smaller screens */
+  }
+
+  /* Hamburger menu animation on click */
+  .hamburger-menu.active .hamburger-inner:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* Top line transforms */
+  }
+
+  .hamburger-menu.active .hamburger-inner:nth-child(2) {
+    opacity: 0; /* Middle line fades out */
+  }
+
+  .hamburger-menu.active .hamburger-inner:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg); /* Bottom line transforms */
+  }
+  .navigation.active {
+    display: block; /* Show navigation when active */
+  }
+}
+
+@media (max-width: 913px) {
+  .img-div {
+    background-image: url("./assets/zoomedIn.png");
+    background-size: cover;
+    background-position: center;
+    height: 37em;
+  }
+
+  .home {
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  .img-content {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

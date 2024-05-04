@@ -1,24 +1,43 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext, useState } from "react";
 import "../index.css";
 import { Outlet, Link } from "react-router-dom";
 import { Footer } from "./footer";
 import { ShopContext } from "../router";
 import { productInCart } from "../router";
-import { totalPrice } from "../router";
-
+import "../Responsive.css";
 export function numberOfProductsInCart() {
   return productInCart.length;
 }
 export function NavBar() {
-  const { productInCart } = useContext(ShopContext);
+  const [isOpen, setIsOpen] = useState(false); // State to track menu visibility
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen); // Toggle menu state on button click
+    const navigation = document.querySelector(".navigation");
+    navigation.classList.toggle("active"); // Toggle 'active' class on navigation
+  };
 
   return (
     <>
       <nav>
         <div className="nav">
+          {/* Hamburger Menu */}
+
           {/* Left Side */}
           <div className="left-side">
-            <ul>
+            <button
+              className="hamburger-menu"
+              type="button"
+              onClick={toggleMenu}
+            >
+              <span className="hamburger-box">
+                <span className="hamburger-inner"></span>
+                <span className="hamburger-inner"></span>
+                <span className="hamburger-inner"></span>
+              </span>
+            </button>
+
+            <ul className={`navigation ${isOpen ? "active" : ""}`}>
               <li>
                 <Link to="/men">Men</Link>
               </li>
