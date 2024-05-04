@@ -63,6 +63,8 @@
   .navigation li {
     display: block; /* Stack links vertically on smaller screens */
     margin: 0; /* Remove margin between links */
+    font-size: 18px;
+    padding: 5px;
   }
 
   .hamburger-menu {
@@ -315,4 +317,39 @@
   .mainTravis-div {
     width: 295px;
   }
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially off-screen to the left */
+  right: 0; /* Cover the entire width of the viewport */
+  margin-top: 57px;
+  width: 40%;
+  height: 15vh;
+  padding: 20px;
+  font-size: 30px;
+  background-color: white;
+  animation: slideIn 0.5s forwards; /* Apply the slideIn animation by default */
+}
+
+@keyframes slideIn {
+  from {
+    left: -100%; /* Start off-screen to the left */
+  }
+  to {
+    left: 0; /* Slide in to the left edge of the screen */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    left: 0; /* Start at the left edge of the screen */
+  }
+  to {
+    left: -100%; /* Slide out to the left */
+  }
+}
+
+.navigation.closing {
+  animation: slideOut 0.5s forwards; /* Apply the slideOut animation when closing */
 }

@@ -17,6 +17,10 @@ export function NavBar() {
     navigation.classList.toggle("active"); // Toggle 'active' class on navigation
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <nav>
@@ -30,7 +34,7 @@ export function NavBar() {
               type="button"
               onClick={toggleMenu}
             >
-              <span className="hamburger-box">
+              <span className={`hamburger-box ${isOpen ? "active" : ""}`}>
                 <span className="hamburger-inner"></span>
                 <span className="hamburger-inner"></span>
                 <span className="hamburger-inner"></span>
@@ -39,13 +43,19 @@ export function NavBar() {
 
             <ul className={`navigation ${isOpen ? "active" : ""}`}>
               <li>
-                <Link to="/men">Men</Link>
+                <Link onClick={closeMenu} to="/men">
+                  Men
+                </Link>
               </li>
               <li>
-                <Link to="/women">Women</Link>
+                <Link onClick={closeMenu} to="/women">
+                  Women
+                </Link>
               </li>
               <li>
-                <Link to="/kids">Kids</Link>
+                <Link onClick={closeMenu} to="/kids">
+                  Kids
+                </Link>
               </li>
             </ul>
           </div>
