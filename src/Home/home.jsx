@@ -12,7 +12,7 @@ export function Home() {
         <div className="img-div">
           <div className="img-content">
             <h1 id="evaluate">Elevate your look, endless possibilities</h1>
-            <div>
+            <div className="men-div-home">
               <Link to="/men">
                 <button className="men-home-button"> Men </button>
               </Link>

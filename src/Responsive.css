@@ -99,14 +99,220 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  .image {
+    background-image: url("./assets/shoes.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
 }
 
 @media (max-width: 780px) {
+  .AirJordans {
+    font-size: 20px;
+  }
+
+  .for-men {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+  }
+
   .img-content {
     padding-left: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 698px) {
+  .top-pick-buttons {
+    padding: 20px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    transition: border-left 0.3s ease-in-out;
+  }
+
+  .buttons {
+    border-bottom: 2.25px solid #ccc;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 670px) {
+  .top-pick-buttons {
+    padding: 17px;
+    padding-bottom: 5px;
+    font-size: 21px;
+    font-weight: 500;
+    transition: border-left 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 641px) {
+  .buttons {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .New-letter {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 522px) {
+  #evaluate {
+    font-size: 1.5em;
+  }
+  .contact-heading,
+  .menu-heading,
+  .new-letter-heading {
+    font-size: 1.2em;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .New-letter {
+    width: 150px;
+  }
+
+  .img-div {
+    height: 30em;
+  }
+
+  .men-div-home {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .men-home-button {
+    margin: 0;
+    font-size: 0.9em;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 447px) {
+  .img-content {
+    padding-top: 16em;
+  }
+  #evaluate {
+    font-size: 1.38em;
+  }
+
+  .img-div {
+    height: 25em;
+  }
+}
+
+@media (max-width: 425px) {
+  .new-arrival-button {
+    border-radius: 2px;
+    border: 2px solid transparent;
+    width: 10em;
+    color: white;
+    font-size: 1em;
+    background-color: rgb(42, 39, 39);
+  }
+
+  .for-men-NewArrival {
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .new-arrival-title {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 411px) {
+  #evaluate {
+    font-size: 1.2em;
+  }
+
+  .men-home-button {
+    font-size: 1em;
+    width: 9em;
+  }
+
+  .new-arrival-title {
+    font-size: x-large;
+  }
+}
+
+@media (max-width: 362px) {
+  #evaluate {
+    font-size: 1.1em;
+  }
+  .men-home-button {
+    font-size: 0.9em;
+    width: 6em;
+  }
+  .new-arrival-button {
+    width: 8em;
+  }
+  .img-div {
+    height: 20em;
+  }
+  .img-content {
+    height: 16em;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .New-letter {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .top-pick-buttons {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 327px) {
+  #evaluate {
+    font-size: 1em;
+  }
+
+  .top-pick-buttons {
+    font-size: 17px;
+  }
+
+  .top-picks-heading {
+    font-size: x-large;
+  }
+
+  .mainJacket-div,
+  .mainRipped-div,
+  .mainTravis-div {
+    width: 295px;
   }
 }

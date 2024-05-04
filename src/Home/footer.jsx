@@ -45,7 +45,7 @@ export function Footer() {
         {/* News Letter */}
         <div className="New-letter">
           <h2 className="new-letter-heading">NEWSLETTER</h2>
-          <form>
+          <form className="footer-form">
             <input
               name="newLetter"
               type="text"
