@@ -50,11 +50,20 @@ export const findingTotalPrice = () => {
   return sum;
 };
 
+export const removeFromCart = (productId) => {
+  const index = productInCart.findIndex((item) => item.id === productId);
+  if (index !== -1) {
+    productInCart.splice(index, 1); // Remove the item from the cart array
+    totalPrice[0] = findingTotalPrice(); // Recalculate total price
+  }
+};
+
 export const ShopContext = createContext({
   addToCart,
   productInCart,
   totalPrice,
   addToCartHard,
+  removeFromCart,
 });
 
 const Router = () => {
@@ -118,7 +127,7 @@ const Router = () => {
     },
   ]);
   return (
-    <ShopContext.Provider value={{ addToCart, productInCart }}>
+    <ShopContext.Provider value={{ addToCart, productInCart, removeFromCart }}>
       <RouterProvider router={router} />
     </ShopContext.Provider>
   );

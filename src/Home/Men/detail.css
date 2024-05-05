@@ -225,7 +225,6 @@ button.add-to-cart {
   .individualProduct-detail {
     display: flex;
     max-width: 100%;
-    background-color: green;
     align-self: center;
     margin-left: 0;
     margin-top: 5px;
