@@ -13,6 +13,32 @@
 }
 
 @media (max-width: 960px) {
+  .navigation {
+    display: flex; /* Change display to flex */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position absolutely */
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    background-color: #fff; /* Background color for visibility */
+    width: 100%; /* Occupy full width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .navigation.active {
+    display: flex; /* Show navigation when active */
+  }
+
+  .navigation li {
+    display: block;
+    margin: 0;
+    font-size: 18px;
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .right-side {
+    position: relative; /* Make sure it's positioned relatively */
+  }
   .for-men {
     display: flex;
     padding: 5px;
@@ -317,39 +343,4 @@
   .mainTravis-div {
     width: 295px;
   }
-}
-.navigation {
-  position: fixed;
-  top: 0;
-  left: -100%; /* Initially off-screen to the left */
-  right: 0; /* Cover the entire width of the viewport */
-  margin-top: 57px;
-  width: 40%;
-  height: 15vh;
-  padding: 20px;
-  font-size: 30px;
-  background-color: white;
-  animation: slideIn 0.5s forwards; /* Apply the slideIn animation by default */
-}
-
-@keyframes slideIn {
-  from {
-    left: -100%; /* Start off-screen to the left */
-  }
-  to {
-    left: 0; /* Slide in to the left edge of the screen */
-  }
-}
-
-@keyframes slideOut {
-  from {
-    left: 0; /* Start at the left edge of the screen */
-  }
-  to {
-    left: -100%; /* Slide out to the left */
-  }
-}
-
-.navigation.closing {
-  animation: slideOut 0.5s forwards; /* Apply the slideOut animation when closing */
 }

@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import "./detail.css";
+import "/src/index.css";
 import { useContext, useState } from "react";
 import { ShopContext } from "../../../src/router";
 
@@ -32,28 +33,32 @@ export default function ProductDetail({ products }) {
       <br></br>
       <div className="full-detail">
         {/* Images */}
-        <div className="individualProduct-detail" key={product.node.id}>
-          <div className="individual-product-img-div">
-            <img
-              className="img-products"
-              src={product.node.featuredImage.url}
-              alt={product.node.title}
-            />
+
+        <div className="productAndDiscription">
+          <div className="individualProduct-detail" key={product.node.id}>
+            <div className="individual-product-img-div">
+              <img
+                className="img-products"
+                src={product.node.featuredImage.url}
+                alt={product.node.title}
+              />
+            </div>
+          </div>
+          {/* Content */}
+          <div className="product-content-detail">
+            <h2 className="product-title-detail">{product.node.title}</h2>
+            <h2 className="product-description-detail">
+              {product.node.description}
+            </h2>
+            <h2 className="product-price-detail">
+              Price
+              <span className="price-color">
+                ${product.node.variants.edges[0].node.price.amount}
+              </span>
+            </h2>
           </div>
         </div>
-        {/* Content */}
-        <div className="product-content-detail">
-          <h2 className="product-title-detail">{product.node.title}</h2>
-          <h2 className="product-description-detail">
-            {product.node.description}
-          </h2>
-          <h2 className="product-price-detail">
-            Price
-            <span className="price-color">
-              ${product.node.variants.edges[0].node.price.amount}
-            </span>
-          </h2>
-        </div>
+
         {/* Payment Section */}
         <div className="product-payment-detail">
           {/* Upper Part */}
