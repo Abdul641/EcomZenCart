@@ -63,7 +63,6 @@ export default function ProductCodedDetail() {
 
   const handleAddToCart = () => {
     addToCartHard(product, quantity);
-    console.log(productInCart);
   };
 
   return (

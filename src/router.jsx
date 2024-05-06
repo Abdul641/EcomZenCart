@@ -11,6 +11,7 @@ import { numberOfProductsInCart } from "./Home/navbar";
 import ForKids from "./Home/Kids/KidsHead";
 import ProductCodedDetail from "./Home/HardCodedDetail";
 import { addToCartHard } from "./Home/HardCodedDetail";
+import ErrorPage from "./ErrorPage";
 // context
 
 export let productInCart = [];
@@ -81,7 +82,6 @@ const Router = () => {
         const productData = response.data.products.edges;
         setProducts(productData);
         setLoading(false);
-        // console.log(productData);
         localStorage.setItem("products", JSON.stringify(productData));
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -95,6 +95,7 @@ const Router = () => {
     {
       path: "/",
       element: <NavBar />,
+      errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Home /> },
         {
