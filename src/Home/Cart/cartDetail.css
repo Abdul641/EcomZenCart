@@ -3,6 +3,12 @@
   --text-font: "Poppins", sans-serif;
 }
 
+.delete {
+  margin-top: 36px;
+  position: absolute;
+  margin-left: 59em;
+}
+
 .No-Items {
   text-align: center;
   padding: 20px;
@@ -47,7 +53,7 @@
   /* margin-right: 100px; */
   padding-bottom: 25px;
   margin-top: 10px;
-  width: 80%;
+  width: 912px;
 }
 
 .single-products-description {
@@ -137,6 +143,12 @@ span.price {
 }
 
 @media (max-width: 1000px) {
+  .delete {
+    margin-top: 25px;
+    position: absolute;
+    margin-left: 43em;
+  }
+
   .cart-detail-main-container {
     display: flex;
     flex-direction: column;
@@ -176,24 +188,45 @@ span.price {
   .total {
     border: none;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 970px) {
+  .delete {
+    margin-top: 25px;
+    position: absolute;
+    margin-left: 30em;
+  }
+
+  .Empty-cart {
+    margin-left: 180px;
   }
 }
 
 @media (max-width: 800px) {
+  .delete {
+    margin-top: 25px;
+    position: absolute;
+    margin-left: 25em;
+  }
   .Empty-cart {
     margin-left: 150px;
   }
 }
 
-.delete {
-  margin-top: 180px;
-  position: absolute;
-  margin-left: 200px;
-}
-
 @media (max-width: 700px) {
   .Empty-cart {
     margin-left: 100px;
+  }
+
+  .delete {
+    margin-top: 25px;
+    position: absolute;
+    margin-left: 22em;
   }
 }
 
@@ -204,6 +237,12 @@ span.price {
 }
 
 @media (max-width: 450px) {
+  .delete {
+    margin-top: 16.8em;
+    position: absolute;
+    margin-left: 10em;
+  }
+
   .single-product {
     display: flex;
     flex-direction: column;

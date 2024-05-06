@@ -13,7 +13,7 @@ import ProductCodedDetail from "./Home/HardCodedDetail";
 import { addToCartHard } from "./Home/HardCodedDetail";
 // context
 
-export const productInCart = [];
+export let productInCart = [];
 export let totalPrice = [];
 
 const addToCart = (product, quantity) => {
@@ -50,12 +50,12 @@ export const findingTotalPrice = () => {
   return sum;
 };
 
-export const removeFromCart = (productId) => {
-  const index = productInCart.findIndex((item) => item.id === productId);
-  if (index !== -1) {
-    productInCart.splice(index, 1); // Remove the item from the cart array
-    totalPrice[0] = findingTotalPrice(); // Recalculate total price
-  }
+export const removeFromCart = (productName) => {
+  const updatedCart = productInCart.filter(
+    (item) => item.title !== productName
+  );
+  productInCart.splice(0, productInCart.length, ...updatedCart); // Update cart with the filtered items
+  totalPrice[0] = findingTotalPrice(); // Recalculate total price
 };
 
 export const ShopContext = createContext({
