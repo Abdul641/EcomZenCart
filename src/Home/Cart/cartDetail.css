@@ -237,6 +237,16 @@ span.price {
 }
 
 @media (max-width: 450px) {
+  .Empty-cart {
+    margin-left: 20px;
+  }
+
+  .No-Items {
+    font-size: larger;
+  }
+  .click-here {
+    font-size: large;
+  }
   .delete {
     margin-top: 16.8em;
     position: absolute;
@@ -257,5 +267,18 @@ span.price {
   .img-cart-products {
     margin: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .Empty-cart {
+    margin-left: 5px;
+  }
+
+  .No-Items {
+    font-size: larger;
+  }
+  .click-here {
+    font-size: large;
   }
 }
