@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul.cart-sign {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+/* Nav Bar */
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+:root {
+  --heading-font: "Playfair Display", serif;
+  --text-font: "Poppins", sans-serif;
+}
+
+body {
+  /* background-color: rgb(251, 251, 251); */
+}
+
+.cart-number,
+.search-bar {
+  cursor: pointer;
+}
+
+li {
+  font-family: var(--text-font);
+  cursor: pointer;
+  font-size: medium;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: var(--heading-font);
+}
+
+.nav {
+  display: flex;
+  padding: 10px 20px 4px;
+  justify-content: space-between;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  padding: 10px;
+}
+
+.right-side {
+  padding-right: 40px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 20em;
+  font-size: larger;
+  justify-content: space-around;
+}
+
+.cart-number {
+  display: flex;
+  padding-right: 1px;
+}
+
+/* Main home page div */
+
+.img-div {
+  background-image: url("./assets/back.avif");
+  background-size: cover;
+  background-position: center;
+  height: 37em;
+}
+
+#evaluate {
+  font-family: var(--heading-font);
+  font-size: 2.5em;
+  font-family: var(--text-font);
+  color: white;
+  font-weight: 600;
+}
+
+.img-content {
+  padding-top: 24em;
+  padding-left: 47em;
+}
+
+.men-home-button {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  margin-top: 5px;
+  margin-left: 50px;
+  width: 12em;
+  background-color: white;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.men-home-button:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.home {
+  margin-top: 15px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.home-small-para {
+  color: white;
+}
+
+.top-picks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Top Picks Button */
+.top-picks-heading {
+  font-family: var(--text-font);
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.buttons {
+  /* background-color: green; */
+  border-bottom: 2.25px solid #ccc; /* Adjust thickness and color as needed */
+  justify-content: space-evenly;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+.top-pick-buttons {
+  padding: 25px;
+  padding-bottom: 5px;
+  font-size: 22px;
+  color: rgb(111, 106, 106);
+  font-weight: 500;
+  transition: border-left 0.3s ease-in-out;
+}
+
+.buttons button.active {
+  color: black;
+  border-bottom: 2.25px solid black;
+  margin-bottom: -2px; /* Adjust for overlapping line */
+}
+
+.font-black {
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* index.css */
+
+.for-men {
+  margin-left: 140px;
+  margin-right: 140px;
+  display: flex;
+  padding: 5px;
+  height: 400px;
+  justify-content: space-around;
+}
+
+.forMenImg-div {
+  /* background-image: url("./assets/TravisScottPerson.jpeg"); */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 20em;
+  height: 300px;
+  object-fit: contain;
+}
+
+.TravisScott-div {
+  background-image: url("./assets/TravisScottPerson.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.HandBag-div {
+  background-image: url("./assets/handbag2.webp");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.KidsSneaker-div {
+  background-image: url("./assets/KidsShoes.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.Loafers-div {
+  background-image: url("./assets/Loafers.webp");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.Glasses-div {
+  background-image: url("./assets/SecondGlasses.webp");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.WomenWatch-div {
+  background-image: url("./assets/womenWatch.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.GapShirt {
+  background-image: url("./assets/GapShirt.avif");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.TravisScott-div:hover,
+.PufferJacket-div:hover,
+.RippedJeans-div:hover,
+.HandBag-div:hover,
+.Glasses-div:hover,
+.KidsSneaker-div:hover,
+.Loafers-div:hover,
+.WomenWatch-div:hover,
+.GapShirt:hover {
+  transform: scale(1.1);
+  filter: contrast(87%);
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 300px;
+}
+
+.mainRipped-div,
+.mainJacket-div,
+.mainTravis-div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 20em;
+  height: 26em;
+  overflow: hidden;
+}
+
+.RippedJeans-div {
+  background-image: url("./assets/darkBlueRipped.webp");
+  background-size: cover;
+  background-position: center;
+  width: 20em;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+h1.AirJordans {
+  font-family: var(--text-font);
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.TravisScott-Content {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.PufferJacket-div {
+  background-image: url("./assets/PufferSecond.webp");
+  background-size: cover;
+  background-position: center;
+  width: 20em;
+  height: 300px;
+  transition: transform 0.2s;
+}
+
+.WomenWatch-div:hover .shop-now {
+  display: inline;
+}
+.GapShirt:hover .shop-now {
+  display: inline;
+}
+.Glasses-div:hover .shop-now {
+  display: inline;
+}
+.KidsSneaker-div:hover .shop-now {
+  display: inline;
+}
+.HandBag-div:hover .shop-now {
+  display: inline;
+}
+.Loafers-div:hover .shop-now {
+  display: inline;
+}
+.TravisScott-div:hover .shop-now {
+  display: inline;
+}
+.PufferJacket-div:hover .shop-now {
+  display: inline;
+}
+.RippedJeans-div:hover .shop-now {
+  display: inline;
+}
+.shop-now {
+  margin-top: 130px;
+  display: none;
+  background: white;
+  padding: 10px;
+  font-size: 15px;
+  width: 140px;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.shop-now:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.image {
+  background-image: url("./assets/position.avif");
+  background-size: cover;
+  background-position: center;
+  height: 542px;
+}
+
+.new-arrival-title {
+  font-family: var(--text-font);
+  padding-bottom: 5px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.new-arrival-button {
+  padding: 10px;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  width: 12em;
+  color: white;
+  background-color: rgb(42, 39, 39);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.new-arrival-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 25px;
+}
+
+.new-arrival-button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.new-arrival {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hamburger-menu {
+  display: none; /* Initially hide on larger screens */
+  padding: 0; /* Remove default button padding */
+  cursor: pointer; /* Indicate clickable behavior */
+  width: 40px; /* Set button width */
+  height: 40px; /* Set button height */
+}
+
+.hamburger-menu:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.2); /* Subtle focus ring */
+}
+
+.hamburger-box {
+  display: inline-block;
+  padding-top: 7px;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger-inner {
+  display: block;
+  width: 22px; /* Set line width */
+  height: 2px; /* Set line height */
+  background-color: #000000; /* Set line color */
+  margin: 5px auto; /* Center lines vertically */
+  transition: all 0.3s ease-in-out; /* Smooth transition for animation */
+}
+
+/* Media Queries  */
+
+@media (max-width: 1400px) {
+  .img-content {
+    padding-left: 45em;
+  }
+  #evaluate {
+    font-size: 37px;
+  }
+
+  .men-home-button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1321px) {
+  .img-content {
+    padding-left: 43em;
+  }
+  #evaluate {
+    font-size: 35px;
+  }
+
+  .men-home-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1278px) {
+  .img-content {
+    padding-left: 41em;
+  }
+  #evaluate {
+    font-size: 33px;
+  }
+
+  .men-home-button {
+    font-size: 13px;
+  }
+  .shop-now {
+    display: inline;
+  }
+
+  .quantity-div {
+    display: flex;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .mainJacket-div,
+  .mainRipped-div,
+  .mainTravis-div {
+    width: 19em;
+    height: 25em;
+  }
+  .for-men {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1218px) {
+  .img-content {
+    padding-left: 40em;
+  }
+  #evaluate {
+    font-size: 31px;
+  }
+
+  .for-men {
+    gap: 10px;
+  }
+
+  .men-home-button {
+    font-size: 12px;
+  }
+
+  .mainJacket-div,
+  .mainRipped-div,
+  .mainTravis-div {
+    width: 18em;
+    height: 24em;
+  }
+
+  .PufferJacket-div,
+  .TravisScott-div,
+  .RippedJeans-div {
+    width: 20em;
+    height: 270px;
+  }
+  .for-men {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 1194px) {
+  .for-men {
+    gap: 10px;
+  }
+
+  .img-content {
+    padding-left: 38em;
+  }
+  #evaluate {
+    font-size: 31px;
+  }
+
+  .men-home-button {
+    font-size: 12.5px;
+  }
+  .mainJacket-div,
+  .mainRipped-div,
+  .mainTravis-div {
+    width: 19em;
+    height: 22em;
+  }
+
+  .PufferJacket-div,
+  .TravisScott-div,
+  .RippedJeans-div,
+  .HandBag-div,
+  .Loafers-div,
+  .WomenWatch-div,
+  .KidsSneaker-div,
+  .Glasses-div,
+  .GapShirt {
+    width: 20em;
+    height: 260px;
+  }
+}
+
+@media (max-width: 1169px) {
+  .img-content {
+    padding-left: 38em;
+  }
+  #evaluate {
+    font-size: 1.75em;
+  }
+
+  .men-home-button {
+    font-size: 1em;
+  }
+
+  .for-men {
+    gap: 15px;
+  }
+
+  .PufferJacket-div,
+  .TravisScott-div,
+  .RippedJeans-div,
+  .HandBag-div,
+  .Loafers-div,
+  .WomenWatch-div,
+  .KidsSneaker-div,
+  .Glasses-div,
+  .GapShirt {
+    height: 250px;
+  }
+}
+
+@media (max-width: 1124px) {
+  .img-content {
+    padding-left: 36em;
+  }
+}
+
+@media (max-width: 1093px) {
+  .img-content {
+    padding-left: 33em;
+  }
+}
+
+@media (max-width: 1045px) {
+  .img-content {
+    padding-left: 28em;
+  }
+}
+
+.cart-sign {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
