@@ -116,7 +116,7 @@
 
 @media (max-width: 913px) {
   .img-div {
-    background-image: url("./assets/zoomedIn.png");
+    background-image: url("./public/assets/zoomedIn.png");
     background-size: cover;
     background-position: center;
     height: 37em;
@@ -129,7 +129,7 @@
   }
 
   .image {
-    background-image: url("./assets/shoes.png");
+    background-image: url("./public/assets/shoes.png");
     background-size: cover;
     background-position: center;
     height: 300px;

@@ -37,21 +37,21 @@ export const productDescriptions = [
 ];
 
 export const productsPicture = [
-  "../src/assets/rippedJeansNew.jpg",
-  "../src/assets/nike-air-max..jpeg",
-  "../src/assets/adidasSuperStar.webp",
-  "../src/assets/PumaRSX.avif",
-  "../src/assets/Balance574.webp",
-  "../src/assets/nikeTech.jpg",
-  "../src/assets/cargoPants.jpg",
-  "../src/assets/TravisScottPerson.jpeg",
-  "../src/assets/handbag2.webp",
-  "../src/assets/Loafers.webp",
-  "../src/assets/womenWatch.jpg",
-  "../src/assets/3rdWomenHoodie.webp",
-  "../src/assets/KidsShoes.jpg",
-  "../src/assets/SecondGlasses.webp",
-  "../src/assets/GapShirt.avif",
+  "../src/public/assets/rippedJeansNew.jpg",
+  "../src/public/assets/nike-air-max..jpeg",
+  "../src/public/assets/adidasSuperStar.webp",
+  "../src/public/assets/PumaRSX.avif",
+  "../src/public/assets/Balance574.webp",
+  "../src/public/assets/nikeTech.jpg",
+  "../src/public/assets/cargoPants.jpg",
+  "../src/public/assets/TravisScottPerson.jpeg",
+  "../src/public/assets/handbag2.webp",
+  "../src/public/assets/Loafers.webp",
+  "../src/public/assets/womenWatch.jpg",
+  "../src/public/assets/3rdWomenHoodie.webp",
+  "../src/public/assets/KidsShoes.jpg",
+  "../src/public/assets/SecondGlasses.webp",
+  "../src/public/assets/GapShirt.avif",
 ];
 
 export const productPrice = [

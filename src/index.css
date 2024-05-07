@@ -23,10 +23,6 @@ ul.cart-sign {
   --text-font: "Poppins", sans-serif;
 }
 
-body {
-  /* background-color: rgb(251, 251, 251); */
-}
-
 .cart-number,
 .search-bar {
   cursor: pointer;
@@ -85,7 +81,7 @@ ul {
 /* Main home page div */
 
 .img-div {
-  background-image: url("./assets/back.avif");
+  background-image: url("./public/assets/back.avif");
   background-size: cover;
   background-position: center;
   height: 37em;
@@ -146,7 +142,6 @@ ul {
 }
 
 .buttons {
-  /* background-color: green; */
   border-bottom: 2.25px solid #ccc; /* Adjust thickness and color as needed */
   justify-content: space-evenly;
   display: flex;
@@ -199,7 +194,7 @@ ul {
 }
 
 .TravisScott-div {
-  background-image: url("./assets/TravisScottPerson.jpeg");
+  background-image: url("./public/assets/TravisScottPerson.jpeg");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -207,7 +202,7 @@ ul {
 }
 
 .HandBag-div {
-  background-image: url("./assets/handbag2.webp");
+  background-image: url("./public/assets/handbag2.webp");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -215,7 +210,7 @@ ul {
 }
 
 .KidsSneaker-div {
-  background-image: url("./assets/KidsShoes.jpg");
+  background-image: url("./public/assets/KidsShoes.jpg");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -223,7 +218,7 @@ ul {
 }
 
 .Loafers-div {
-  background-image: url("./assets/Loafers.webp");
+  background-image: url("./public/assets/Loafers.webp");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -231,7 +226,7 @@ ul {
 }
 
 .Glasses-div {
-  background-image: url("./assets/SecondGlasses.webp");
+  background-image: url("./public/assets/SecondGlasses.webp");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -239,7 +234,7 @@ ul {
 }
 
 .WomenWatch-div {
-  background-image: url("./assets/womenWatch.jpg");
+  background-image: url("./public/assets/womenWatch.jpg");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -247,7 +242,7 @@ ul {
 }
 
 .GapShirt {
-  background-image: url("./assets/GapShirt.avif");
+  background-image: url("./public/assets/GapShirt.avif");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -280,7 +275,7 @@ ul {
 }
 
 .RippedJeans-div {
-  background-image: url("./assets/darkBlueRipped.webp");
+  background-image: url("./public/assets/darkBlueRipped.webp");
   background-size: cover;
   background-position: center;
   width: 20em;
@@ -304,7 +299,7 @@ h1.AirJordans {
 }
 
 .PufferJacket-div {
-  background-image: url("./assets/PufferSecond.webp");
+  background-image: url("./public/assets/PufferSecond.webp");
   background-size: cover;
   background-position: center;
   width: 20em;
@@ -357,7 +352,7 @@ h1.AirJordans {
 }
 
 .image {
-  background-image: url("./assets/position.avif");
+  background-image: url("./public/assets/position.avif");
   background-size: cover;
   background-position: center;
   height: 542px;
