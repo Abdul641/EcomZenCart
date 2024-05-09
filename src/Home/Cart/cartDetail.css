@@ -67,7 +67,7 @@
 }
 
 .img-cart-products {
-  background-image: url(/src/assets/2ndNewJeans.png);
+  background-image: url("/assets/2ndNewJeans.png");
   height: 180px;
   max-width: 100%;
   border-radius: 20px;

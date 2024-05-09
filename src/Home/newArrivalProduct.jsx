@@ -37,21 +37,21 @@ export const productDescriptions = [
 ];
 
 export const productsPicture = [
-  "../src/public/assets/rippedJeansNew.jpg",
-  "../src/public/assets/nike-air-max..jpeg",
-  "../src/public/assets/adidasSuperStar.webp",
-  "../src/public/assets/PumaRSX.avif",
-  "../src/public/assets/Balance574.webp",
-  "../src/public/assets/nikeTech.jpg",
-  "../src/public/assets/cargoPants.jpg",
-  "../src/public/assets/TravisScottPerson.jpeg",
-  "../src/public/assets/handbag2.webp",
-  "../src/public/assets/Loafers.webp",
-  "../src/public/assets/womenWatch.jpg",
-  "../src/public/assets/3rdWomenHoodie.webp",
-  "../src/public/assets/KidsShoes.jpg",
-  "../src/public/assets/SecondGlasses.webp",
-  "../src/public/assets/GapShirt.avif",
+  "/assets/rippedJeansNew.jpg",
+  "/assets/nike-air-max..jpeg",
+  "/assets/adidasSuperStar.webp",
+  "/assets/PumaRSX.avif",
+  "/assets/Balance574.webp",
+  "/assets/nikeTech.jpg",
+  "/assets/cargoPants.jpg",
+  "/assets/TravisScottPerson.jpeg",
+  "/assets/handbag2.webp",
+  "/assets/Loafers.webp",
+  "/assets/womenWatch.jpg",
+  "/assets/3rdWomenHoodie.webp",
+  "/assets/KidsShoes.jpg",
+  "/assets/SecondGlasses.webp",
+  "/assets/GapShirt.avif",
 ];
 
 export const productPrice = [
